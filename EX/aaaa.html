@@ -1,0 +1,70 @@
+스타일에 border, padding, margin이 뭔지
+position 옵션이 뭔지
+
+1. border : 테두리스타일 설정/반환
+ex:<div id="hz" style="border:1px solid red;">가가가</div>
+->()
+
+2. padding : 요소의 안쪽 여백 설정/반환. 
+(기본값: 0. 모든 브라우저 지원.)
+
+3. margin : 요소 바깥 여백 설정/반환
+
+4. position ->  HTML 문서 상에서 요소가 배치되는 방식을 결정
+요소의 정확한 위치 지정을 위해 
+top, left, bottom, right 속성과 함께 사용
+
+- static
+ex)position: static 
+-> 기본값. html문서상 원래 있어야하는 위치에 배치.
+(html에 작성된 순서 그대로 브라우저 화면에 표시됨.)
+
+- relative
+ex)position: relative
+   top: 28px;
+   left: 48px;
+-> 원래 요소의 위치를 기준으로 top, left, bottom, right 속성과 함께 
+얼마나 떨어지게할지를 지정
+
+- absolute
+ex)position: absolute
+   bottom: 8px;
+   right: 16px;
+   (position 속성을 absolute로 변경하고, 부모 요소를 기준으로 
+   하단에서 8px, 우측에서 16x 떨어지도록 bottom과 right 속성을 설정)
+-> position 속성이 absolute일 때 해당 요소는 배치 기준을 자신이 아닌 
+상위 요소에서 찾음
+
+- fixed
+ex)position: fixed
+   bottom: 8px;
+   right: 16px;
+   (position 속성을 absolute로 변경하고, 뷰포트 기준으로 
+   하단에서 8px, 우측에서 16x 떨어지도록 bottom과 right 속성 지정)
+->고정!!
+화면을 위아래로 스크롤하더라도 
+브라우저 화면의 특정 부분에 고정되어 움직이지 않음
+
+- sticky
+ex)position: sticky
+
+main {
+    width: 300px;
+    height: 120px;
+    overflow: auto;
+    background: tomato;
+  }
+  ->
+  div:nth-of-type(2) {
+    position: sticky;
+    top: 0;
+    background: cyan;
+    opacity: 0.8;
+  }
+->이제 스크롤바를 아래로 내려서 화면을 위로 올려보면, 두 번째 요소가 
+화면 상단에 끈적하게(sticky) 붙어서 움직이지 않는 것을 알 수 있음.
+반면에 position: static인 세 번째 요소는 
+이에 구애받지 않고 화면에 따라 올라감.
+
+-> CSS에서 비교적 최근에 추가된 속성값. 
+특이하게도 브라우저 화면을 스크롤링할 때 효과가 나타남.

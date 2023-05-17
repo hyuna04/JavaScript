@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var의 문제점</title>
+</head>
+<body>
+    <script>
+        //3. 호이스팅 (할당 후 선언해도 ㄱㅊ)
+        x = 100;
+
+        var x ;
+
+        console.log(x);
+
+        //let 호이스팅 불가
+        y = 200;
+
+        let y;
+
+        console.log(y);
+</script>
+</body>
+</html>
