@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+<body>
+    <script>
+        //prompt로 사용자 입력값 받기
+        //end면 종료
+        //아니면 parseInt로 숫자형으로 변경해서 합산
+        //합산값을 계속 출력
+        //document.write + br 츨력
+        let a = 0;
+        while(true) {
+            const num = prompt("정수입력");
+            if(num=='end'){
+                break;
+            }
+            a += parseInt(num); //parseInt->문자열을 숫자형으로 변경하여 출력
+        }
+        document.write(`현재 합은 : ${a}<br>`);
+    </script>
+</body>
+</html>
