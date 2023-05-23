@@ -11,11 +11,11 @@
         //7개의 로또 번호 담아줄 배열
         const lotto = [];
 
-        for(let i = 0; i < 7; i++) {
+        for(let l = 0; l < 6; l++) {
             lotto.push(Math.floor(Math.random() * 45 + 1));
 
             //중복처리
-            for(let j = 0; j < i; j++) {
+            for(let i = 0; i < 7; i++) {
                 if(lotto[i] == lotto[j]) {
                     i--;
                     lotto.pop();
@@ -53,48 +53,10 @@
                 l--;
             } else {
                 //중복처리
-                for(let m = 0; m < l; m++) {
-                    if(userNum[l] == userNum[m]) {
-                        l--;
-                        userNum.pop();
-                        break;
-                    }
+                for(let m = 0; m < 1; m++) {
+                    
                 }
             }
-        }
-
-        document.write(`이번 주 구매한 로또 번호 : ${userNum}<br>`);
-
-        //등수 지정
-        let cnt = 0;
-        let bonus = false;
-
-        for(let o = 0; o < lotto.length; o++) {
-            for(let p = 0; p < userNum.length; p++) {
-                if(lotto[o] == userNum[p]) {
-                    if(o == 6) {
-                        bonus = true;
-                    } else {
-                        cnt++;
-                    }
-                }
-            }
-        }
-
-        if(cnt == 6) {
-            document.write(`1등 당첨`);
-        } else if(cnt == 5) {
-            if(bonus) {
-                document.write(`2등 당첨`);
-            } else {
-                document.write(`3등 당첨`);
-            }
-        } else if(cnt == 4) {
-            document.write(`4등 당첨`);
-        } else if(cnt == 3) {
-            document.write(`5등 당첨`);
-        } else {
-            document.write(`꽝`);
         }
     </script>
 </body>
